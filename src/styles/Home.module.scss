@@ -1,0 +1,13 @@
+@use "../ThemeConfig/colors" as *;
+@use "../ThemeConfig/mixins.scss" as *;
+@import "../ThemeConfig/Variables.scss";
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(100vh - 70px);
+  overflow: auto;
+  background-color: $ColorFF;
+ }

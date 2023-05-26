@@ -1,0 +1,38 @@
+
+$Color23: var(--color23);
+$ColorFF: var(--colorFF);
+$Color66: var(--color66);
+$ColorF5: var(--colorF5);
+$ColorF3: var(--colorF3);
+$ColorF8: var(--colorE8);
+$ColorEE: var(--colorEE);
+$Color9E: var(--color9E);
+$ColorEB: var(--colorEB);
+$Color02: var(--color02);
+$ColorEC: var(--colorEC);
+$ColorBE: var(--colorBE);
+$ColorE3: var(--colorE3);
+$Color5F: var(--color5F);
+$Color9B: var(--color9B);
+$ColorBD: var(--colorBD);
+$Color2C: var(--color2C);
+$Color22: var(--color22);
+$Color05: var(--color05);
+
+
+$breakpoints-up: (
+  sm: 640px,  
+  md: 1000px,
+  lg: 1184px,
+  xl: 1440px,
+  xxl: 1600px,
+);
+
+$breakpoints-down: (
+  xs: 639px,
+  sm: 999px,
+  md: 1183px,
+  lg: 1339px,
+  xl: 1599px,
+);
+
