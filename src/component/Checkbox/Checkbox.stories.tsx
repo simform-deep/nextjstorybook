@@ -5,6 +5,8 @@ import type { CheckboxValueType } from 'antd/es/checkbox/Group';
 
 const CheckboxGroup = Checkbox.Group;
 
+const plainOptions = ['Apple', 'Pear', 'Orange'];
+
 const options = [
     { label: 'Apple', value: 'Apple' },
     { label: 'Pear', value: 'Pear' },
@@ -13,6 +15,12 @@ const options = [
   const onChange = (checkedValues: CheckboxValueType[]) => {
     console.log('checked = ', checkedValues);
   };
+
+const optionsWithDisabled = [
+  { label: 'Apple', value: 'Apple' },
+  { label: 'Pear', value: 'Pear' },
+  { label: 'Orange', value: 'Orange', disabled: false },
+];
 
 const meta: Meta<typeof Checkbox> = {
   title: 'Checkbox',
@@ -23,6 +31,23 @@ const meta: Meta<typeof Checkbox> = {
 export default meta;
 
 type Story = StoryObj<typeof Checkbox>;
+
+const GroupCheckbox = () => {
+ return <>
+    <Checkbox.Group options={plainOptions} defaultValue={['Apple']} onChange={onChange} />
+    <br />
+    <br />
+    <Checkbox.Group options={options} defaultValue={['Pear']} onChange={onChange} />
+    <br />
+    <br />
+    <Checkbox.Group
+      options={optionsWithDisabled}
+      disabled
+      defaultValue={['Apple']}
+      onChange={onChange}
+    />
+  </>
+};
 
 export const BasicCheckbox: Story = {
   args:{
@@ -47,14 +72,7 @@ export const BasicCheckboxFilled: Story = {
     } ,
 };
 
-export const BasicCheckboxGroup: Story = {
-    args:{
-      children:<CheckboxGroup options={options} onChange={onChange}></CheckboxGroup >,
-    } ,
-};
 
-export const BasicCheckboxDefaultCheck: Story = {
-    args:{
-      children:<CheckboxGroup options={options} defaultValue={['Apple']} onChange={onChange}></CheckboxGroup >,
-    } ,
-};
+export const CheckboxGroups: Story ={
+  render: () => <GroupCheckbox />,
+}
