@@ -1,8 +1,8 @@
 
 // AntDesign global Variables
 export const antDTheme = (themeColor) => ({
-  colorPrimary: 'var(--primary)',
-  colorPrimaryBg: themeColor.Primary,
+  colorPrimary: themeColor.$Color23,
+  colorPrimaryBg: themeColor.$Color23,
   colorPrimaryBgHover: themeColor.Secondary,
   controlHeightSX: 30,
   controlHeightSM: 40,
@@ -10,7 +10,7 @@ export const antDTheme = (themeColor) => ({
   fontSize: 16,
   fontFamily: '"Nunito", sans-serif;',
   borderRadius: 8,
-  fontSizeHeading1: 48,
+  fontSizeHeading1: 44,
   fontSizeHeading2: 28,
   fontSizeHeading3: 24,
   fontSizeHeading4: 18,
@@ -29,13 +29,13 @@ export const antDComponents = (themeColor) => ({
     paddingContentHorizontal: 20,
     controlPaddingHorizontalSM: 20,
     paddingContentVertical: 40,
-    colorBorder: 'var(--primary)',
+    colorBorder: themeColor.Primary,
     colorBgTextHover: themeColor.Secondary,
     colorText: themeColor.Primary,
     colorBgTextActive: themeColor.Secondary,
+    controlHeightLG:56,
     controlHeight: 44,
     controlHeightSM: 32,
-    controlHeightLG:44,
     colorBorderSecondary: themeColor.Secondary,
     colorPrimaryText: themeColor.Primary,
     paddingXS: 20,
@@ -60,7 +60,9 @@ export const antDComponents = (themeColor) => ({
   Select: {
     borderRadius: 8,
     colorBorder: themeColor.BorderColor,
-    controlHeight: 44,
+    controlHeightLG: 44,
+    controlHeight: 36,
+    controlHeightSM: 28,
     controlHeightMD: 100,
     //colorFillSecondary: themeColor.Transparent,
     //colorIcon: '#f00',
@@ -72,6 +74,7 @@ export const antDComponents = (themeColor) => ({
     //colorPrimary: themeColor.TestColor,
     //colorBgContainer: themeColor.GrayD8,
     //fontSizeIcon: 80,
+  
 
   },
 
@@ -89,5 +92,10 @@ export const antDComponents = (themeColor) => ({
     // colorBgContainer: themeColor.TestColor,
 
   },
+  Badge:{
+    controlHeight:36,
+    controlHeightSM:24,
+  },
+
 
 });
